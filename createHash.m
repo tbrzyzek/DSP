@@ -9,7 +9,8 @@ function hash_table = createHash(hash_size,songnames)
     % iterate through each song in the list
     for songid = 1:length(songnames);
         % read each song file
-        [song,fs] = audioread(songnames{songid});
+        filename = sprintf('songs/%s',songnames{songid});
+        [song,fs] = audioread(filename);
         % fingerprint each song
         peaks = fingerprints(song,fs);
         % hash the peak values from each section of the fingerprint

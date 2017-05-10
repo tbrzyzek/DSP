@@ -1,4 +1,9 @@
 function bestMatchID = match_segment(clip, fs,hash_table,numSongs)
+% match_segment function was taken from a public repository: 
+% https://github.com/JeremySavarin/Songbird/blob/master/find_peak_pairs.m
+% This function was changed slightly so that our hashtables and fingerprint
+% code would work with the function.
+
 %  match_segment() takes a sound clip and the sampling frequency and
 %  attempts to find the best match within the loaded song database
 
